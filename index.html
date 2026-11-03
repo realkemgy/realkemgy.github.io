@@ -1,16 +1,227 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oluwakemi Oloba-Whenu | Academic Website</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Oluwakemi Oloba-Whenu | Academic Website</title>
+
+<style>
+:root {
+    --purple: #32145B;
+    --light-purple: #EEE7F5;
+    --cream: #FAF7F0;
+    --white: #FFFFFF;
+    --text: #30283A;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: var(--text);
+    background: var(--white);
+    line-height: 1.7;
+}
+
+header {
+    background: var(--purple);
+    color: var(--white);
+    padding: 24px 8%;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 30px;
+}
+
+header p {
+    margin: 5px 0 0;
+    color: #E8DDF5;
+}
+
+nav {
+    background: #241044;
+    padding: 14px 8%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+nav a:hover {
+    color: #E5D2FA;
+}
+
+.hero {
+    background: var(--cream);
+    padding: 85px 8%;
+}
+
+.hero h2 {
+    color: var(--purple);
+    font-size: 38px;
+    max-width: 750px;
+    line-height: 1.25;
+}
+
+.hero p {
+    max-width: 700px;
+    font-size: 18px;
+}
+
+section {
+    padding: 55px 8%;
+}
+
+section h2 {
+    color: var(--purple);
+}
+
+.about {
+    background: var(--white);
+}
+
+.focus {
+    background: var(--light-purple);
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 22px;
+    border-radius: 10px;
+    border-left: 4px solid var(--purple);
+}
+
+.card h3 {
+    color: var(--purple);
+}
+
+footer {
+    background: var(--purple);
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+@media (max-width: 600px) {
+    .hero h2 {
+        font-size: 29px;
+    }
+}
+</style>
 </head>
+
 <body>
 
+<header>
     <h1>Oluwakemi Oloba-Whenu</h1>
-    <h2>Teaching | Research | Computational Chemistry</h2>
+    <p>Associate Professor | Computational Chemistry | Cheminformatics</p>
+</header>
 
-    <p>Welcome to my academic website.</p>
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#teaching">Teaching</a>
+    <a href="#research">Research</a>
+    <a href="#publications">Publications</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<div class="hero" id="home">
+    <h2>Welcome to My Academic Website</h2>
+    <p>
+        Exploring chemistry through teaching, computational
+        approaches and molecular science.
+    </p>
+    <p>
+        A space for learning, scientific research and the
+        application of computational methods to chemical problems.
+    </p>
+</div>
+
+<section class="about" id="about">
+    <h2>About Me</h2>
+    <p>
+        I am an academic with interests in computational chemistry,
+        cheminformatics and computer-aided drug discovery.
+        My work integrates molecular modelling, computational
+        methods and chemical information to support teaching
+        and scientific research.
+    </p>
+</section>
+
+<section class="focus" id="teaching">
+    <h2>Teaching</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>Physical Chemistry</h3>
+            <p>Concepts, principles and applications of physical chemistry.</p>
+        </div>
+        <div class="card">
+            <h3>Molecular Spectroscopy</h3>
+            <p>Understanding molecular structure through spectroscopy.</p>
+        </div>
+        <div class="card">
+            <h3>Computational Chemistry</h3>
+            <p>Computational approaches to molecular systems.</p>
+        </div>
+        <div class="card">
+            <h3>Cheminformatics</h3>
+            <p>Chemical data analysis and molecular information science.</p>
+        </div>
+    </div>
+</section>
+
+<section id="research">
+    <h2>Research Interests</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>Computational Chemistry</h3>
+            <p>Density functional theory and reaction mechanisms.</p>
+        </div>
+        <div class="card">
+            <h3>Drug Discovery</h3>
+            <p>Molecular docking and computer-aided drug design.</p>
+        </div>
+        <div class="card">
+            <h3>Molecular Modelling</h3>
+            <p>Molecular dynamics and structure-based investigations.</p>
+        </div>
+    </div>
+</section>
+
+<section class="focus" id="publications">
+    <h2>Publications</h2>
+    <p>
+        Explore my research publications and scientific contributions.
+        Publication details will be added here.
+    </p>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <p>For academic enquiries, research collaboration and teaching resources.</p>
+</section>
+
+<footer>
+    <p>© 2026 Oluwakemi Oloba-Whenu | Academic Website</p>
+</footer>
 
 </body>
 </html>
