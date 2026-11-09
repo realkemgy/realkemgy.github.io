@@ -1,182 +1,105 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Molecular Spectroscopy | Oluwakemi Oloba-Whenu</title>
-
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #FAF7F0;
-            color: #30283A;
-            line-height: 1.8;
-        }
-
-        header {
-            background: #32145B;
-            color: white;
-            padding: 30px 8%;
-        }
-
-        header h1 {
-            color: white;
-        }
-
-        header a {
-            color: white;
-            text-decoration: none;
-        }
-
-        main {
-            max-width: 950px;
-            margin: 35px auto;
-            padding: 0 20px;
-        }
-
-        section {
-            background: white;
-            padding: 25px;
-            margin-bottom: 22px;
-            border-radius: 10px;
-        }
-
-        h2 {
-            color: #32145B;
-            border-bottom: 2px solid #FAF7F0;
-            padding-bottom: 8px;
-        }
-
-        li {
-            margin-bottom: 8px;
-        }
-
-        .back {
-            display: inline-block;
-            margin-top: 12px;
-        }
-
-        footer {
-            background: #241044;
-            color: white;
-            text-align: center;
-            padding: 18px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A structured university-level learning resource in molecular spectroscopy, covering rotational, vibrational, infrared, Raman, electronic and magnetic resonance spectroscopy.">
+  <title>Molecular Spectroscopy | Learning Resource</title>
+  <style>
+    :root{--ink:#172b4d;--ink-soft:#344766;--teal:#087f8c;--teal-dark:#05616b;--teal-pale:#e8f5f5;--paper:#f6f8fb;--white:#fff;--line:#dce4ec;--muted:#64748b;--gold:#e5b45b;--shadow:0 14px 36px rgba(23,43,77,.08);--radius:18px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}
+    body{margin:0;color:var(--ink);background:var(--paper);font:16px/1.7 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif}
+    a{color:var(--teal-dark)}.topbar{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}
+    .navwrap{max-width:1160px;margin:auto;padding:0 26px;min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{color:var(--ink);text-decoration:none;font-weight:800;letter-spacing:-.03em}.brand span{color:var(--teal)}
+    .navlinks{display:flex;flex-wrap:wrap;gap:22px}.navlinks a{text-decoration:none;color:var(--ink-soft);font-size:.92rem;font-weight:650}.navlinks a:hover{color:var(--teal)}
+    .hero{overflow:hidden;position:relative;color:white;background:radial-gradient(circle at 82% 20%,rgba(36,190,190,.28),transparent 28%),linear-gradient(120deg,#142746 0%,#183d59 56%,#087f8c 130%)}
+    .hero:after{content:"";position:absolute;width:440px;height:440px;right:-145px;bottom:-260px;border:1px solid rgba(255,255,255,.18);border-radius:50%;box-shadow:0 0 0 38px rgba(255,255,255,.035),0 0 0 82px rgba(255,255,255,.025)}
+    .hero-inner{max-width:1160px;margin:auto;padding:88px 26px 92px;display:grid;grid-template-columns:1.25fr .75fr;gap:48px;align-items:center;position:relative;z-index:1}
+    .eyebrow{color:#9ce3e2;text-transform:uppercase;letter-spacing:.16em;font-size:.76rem;font-weight:800}
+    h1{max-width:760px;margin:14px 0 18px;font-size:clamp(2.6rem,6vw,4.8rem);line-height:1.04;letter-spacing:-.055em}
+    .hero p{max-width:680px;color:#e1edf3;font-size:1.12rem;margin:0 0 28px}
+    .actions{display:flex;flex-wrap:wrap;gap:12px}.button{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:11px 19px;border-radius:999px;text-decoration:none;font-weight:750;transition:transform .2s,background .2s}
+    .button:hover{transform:translateY(-2px)}.button.primary{color:#12334a;background:#a8e6e3}.button.secondary{color:white;border:1px solid rgba(255,255,255,.42)}
+    .orbit-card{justify-self:end;width:min(100%,340px);aspect-ratio:1;border-radius:50%;border:1px solid rgba(255,255,255,.25);position:relative;display:grid;place-items:center;background:radial-gradient(circle,rgba(255,255,255,.12),rgba(255,255,255,.015) 65%)}
+    .orbit-card:before,.orbit-card:after{content:"";position:absolute;width:72%;height:30%;border:1px solid rgba(168,230,227,.72);border-radius:50%;transform:rotate(-32deg)}
+    .orbit-card:after{transform:rotate(32deg)}.atom{width:76px;height:76px;border-radius:50%;background:#a8e6e3;box-shadow:0 0 42px rgba(168,230,227,.5)}
+    .electron{position:absolute;width:15px;height:15px;border-radius:50%;background:var(--gold);box-shadow:0 0 20px rgba(229,180,91,.7)}.e1{top:18%;left:27%}.e2{right:17%;bottom:30%}
+    main{max-width:1160px;margin:auto;padding:0 26px 76px}section{padding-top:68px}.section-head{max-width:760px;margin-bottom:28px}
+    .kicker{color:var(--teal);font-size:.76rem;text-transform:uppercase;letter-spacing:.14em;font-weight:850}
+    h2{margin:7px 0 12px;font-size:clamp(1.8rem,3.5vw,2.55rem);line-height:1.15;letter-spacing:-.04em}
+    .section-head p{color:var(--muted);margin:0;font-size:1.03rem}
+    .intro-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:22px}.panel{background:white;border:1px solid var(--line);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow)}
+    .panel h3{margin:0 0 10px;font-size:1.2rem}.panel p{margin:0;color:var(--ink-soft)}.principles{display:grid;gap:13px}
+    .principle{display:flex;gap:13px;align-items:flex-start}.num{flex:0 0 34px;height:34px;display:grid;place-items:center;border-radius:11px;background:var(--teal-pale);color:var(--teal-dark);font-weight:850}
+    .principle strong{display:block;margin-bottom:2px}.principle span:last-child{color:var(--muted);font-size:.94rem}
+    .chapter-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .chapter{background:white;border:1px solid var(--line);border-radius:var(--radius);padding:24px;display:flex;flex-direction:column;min-height:236px;box-shadow:0 7px 22px rgba(23,43,77,.045);transition:transform .2s,box-shadow .2s,border-color .2s}
+    .chapter:hover{transform:translateY(-4px);border-color:#9bd5d5;box-shadow:var(--shadow)}
+    .chapter .tag{align-self:flex-start;padding:4px 9px;border-radius:999px;background:var(--teal-pale);color:var(--teal-dark);font-size:.72rem;font-weight:800}
+    .chapter h3{margin:15px 0 7px;font-size:1.18rem}.chapter p{color:var(--muted);margin:0 0 18px;font-size:.94rem}.chapter a{margin-top:auto;font-weight:800;text-decoration:none}.chapter a:after{content:"  →"}
+    .pathway{background:#eaf3f6;border:1px solid #d7e7eb;border-radius:var(--radius);padding:30px}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:22px}
+    .step{background:white;padding:18px;border-radius:13px;border:1px solid #dce8eb}.step b{display:block;color:var(--teal-dark);margin-bottom:5px}.step span{color:var(--muted);font-size:.9rem}
+    .resource-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.resource{padding:24px;background:white;border:1px solid var(--line);border-radius:var(--radius)}
+    .resource .symbol{font-size:1.5rem}.resource h3{margin:8px 0}.resource p{color:var(--muted);margin:0;font-size:.94rem}
+    .foundation{display:flex;align-items:center;justify-content:space-between;gap:25px;background:#172b4d;color:white;padding:30px;border-radius:var(--radius)}
+    .foundation p{margin:7px 0 0;color:#d7e2ed;max-width:700px}.foundation .button{background:white;color:var(--ink);white-space:nowrap}
+    .note{color:var(--muted);font-size:.88rem;margin-top:14px}footer{background:#10223d;color:#d7e2ed;padding:28px 26px;text-align:center;font-size:.9rem}footer p{margin:4px}
+    @media(max-width:850px){.hero-inner{grid-template-columns:1fr;padding-top:68px}.orbit-card{display:none}.chapter-grid{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:600px){.navwrap{align-items:flex-start;flex-direction:column;padding-top:13px;padding-bottom:13px;gap:8px}.navlinks{gap:8px 16px}.hero-inner{padding:55px 22px 64px}main{padding-left:18px;padding-right:18px}.intro-grid,.chapter-grid,.resource-grid,.steps{grid-template-columns:1fr}section{padding-top:52px}.panel{padding:22px}.foundation{align-items:flex-start;flex-direction:column}}
+  </style>
 </head>
-
 <body>
-
-<header>
-    <h1>Molecular Spectroscopy</h1>
-    <p>Course learning materials and resources</p>
-    <a class="back" href="teaching.html">← Back to Teaching</a>
-</header>
-
-<main>
-
-    <section>
-        <h2>Course Overview</h2>
-
-        <p>
-            This course introduces students to the fundamental physical and
-            theoretical principles of molecular spectroscopy, with emphasis
-            on the interaction of electromagnetic radiation with atoms and
-            molecules. It explores the quantisation of molecular energy
-            levels and the physical mechanisms responsible for
-            spectroscopic transitions.
-        </p>
-
-        <p>
-            The course covers the theoretical foundations of microwave
-            (rotational), vibrational, electronic (UV-Visible), Raman,
-            magnetic resonance, nuclear magnetic resonance (NMR),
-            electron spin resonance (ESR/EPR), Mössbauer, and
-            photoelectron spectroscopy.
-        </p>
-
-        <p>
-            Particular attention is given to quantum mechanical models,
-            molecular energy transitions, spectroscopic selection rules,
-            molecular symmetry, and the interpretation of spectral features.
-            Students will develop an understanding of how different
-            spectroscopic techniques provide complementary information
-            about molecular structure, bonding, and electronic properties.
-        </p>
+  <div class="topbar"><div class="navwrap">
+    <a class="brand" href="#top">MOLECULAR <span>SPECTROSCOPY</span></a>
+    <nav class="navlinks" aria-label="Main navigation"><a href="#overview">Overview</a><a href="#chapters">Topics</a><a href="#study-path">Study guide</a><a href="#resources">Learning resources</a></nav>
+  </div></div>
+  <header class="hero" id="top"><div class="hero-inner"><div>
+    <div class="eyebrow">A guided university-level learning resource</div>
+    <h1>Read the story molecules tell through light.</h1>
+    <p>Explore how molecules interact with electromagnetic radiation, how spectra arise, and how spectroscopic measurements reveal molecular structure, energy levels and motion.</p>
+    <div class="actions"><a class="button primary" href="#chapters">Explore the topics</a><a class="button secondary" href="#study-path">How to use this resource</a></div>
+  </div><div class="orbit-card" aria-hidden="true"><div class="atom"></div><i class="electron e1"></i><i class="electron e2"></i></div></div></header>
+  <main>
+    <section id="overview"><div class="section-head"><div class="kicker">Start here</div><h2>What is molecular spectroscopy?</h2>
+      <p>Molecular spectroscopy examines the interaction of electromagnetic radiation with matter. The frequencies and intensities observed in a spectrum provide evidence about molecular energy levels and can be used to investigate molecular structure and behaviour.</p></div>
+      <div class="intro-grid"><article class="panel"><h3>Why study it?</h3><p>Different regions of the electromagnetic spectrum probe different molecular energy changes. Rotational, vibrational, electronic and magnetic-resonance methods therefore provide complementary information. Learning to connect a measured spectrum with the underlying molecular process is central to interpreting spectroscopic data.</p></article>
+      <article class="panel"><h3>Core ideas to keep in view</h3><div class="principles">
+        <div class="principle"><span class="num">1</span><div><strong>Energy is quantised</strong><span>Molecules occupy allowed energy states.</span></div></div>
+        <div class="principle"><span class="num">2</span><div><strong>Transitions involve energy differences</strong><span>Radiation is absorbed or emitted when allowed transitions occur.</span></div></div>
+        <div class="principle"><span class="num">3</span><div><strong>Selection rules matter</strong><span>Not every energy-level transition produces an observable spectral line.</span></div></div>
+      </div></article></div>
     </section>
-
-    <section>
-        <h2>Course Aim</h2>
-
-        <p>
-            To develop a comprehensive theoretical understanding of the
-            fundamental principles of molecular spectroscopy and the
-            physical processes governing the interaction of electromagnetic
-            radiation with matter.
-        </p>
+    <section id="chapters"><div class="section-head"><div class="kicker">Learning modules</div><h2>Explore molecular spectroscopy</h2>
+      <p>Work through the topics in sequence. Each module will be developed into a full learning chapter with explanations, mathematical treatment, diagrams, worked examples, applications and practice questions.</p></div>
+      <div class="chapter-grid">
+        <article class="chapter"><span class="tag">Module 01</span><h3>Introduction to Molecular Spectroscopy</h3><p>Electromagnetic radiation, molecular energy levels, absorption and emission, spectral regions and the foundations of spectroscopic measurements.</p><a href="#overview">Begin with the overview</a></article>
+        <article class="chapter"><span class="tag">Module 02</span><h3>Rotational (Microwave) Spectroscopy</h3><p>Rotational energy levels, moments of inertia, rotational constants, selection rules, isotopic effects and centrifugal distortion.</p><a href="#study-path">Study sequence</a></article>
+        <article class="chapter"><span class="tag">Module 03</span><h3>Vibrational Spectroscopy</h3><p>Molecular vibrations, the harmonic oscillator model, vibrational energy levels, normal modes, anharmonicity and selection rules.</p><a href="#study-path">Study sequence</a></article>
+        <article class="chapter"><span class="tag">Module 04</span><h3>Infrared Spectroscopy</h3><p>Infrared absorption, vibrational activity, characteristic frequencies, band assignment and the use of IR spectra in molecular identification.</p><a href="#study-path">Study sequence</a></article>
+        <article class="chapter"><span class="tag">Module 05</span><h3>Raman Spectroscopy</h3><p>Polarizability, Raman selection rules, rotational and vibrational Raman spectra, Stokes and anti-Stokes lines, instrumentation and applications.</p><a href="#study-path">Study sequence</a></article>
+        <article class="chapter"><span class="tag">Module 06</span><h3>Electronic Spectroscopy</h3><p>Electronic energy transitions and the interpretation of molecular absorption in the context of molecular electronic structure.</p><a href="#study-path">Study sequence</a></article>
+        <article class="chapter"><span class="tag">Module 07</span><h3>Magnetic Resonance Spectroscopy</h3><p>Magnetic nuclei, nuclear spin, energy levels in a magnetic field, resonance conditions and the basis of NMR measurements.</p><a href="#study-path">Study sequence</a></article>
+        <article class="chapter"><span class="tag">Module 08</span><h3>Spectral Interpretation and Applications</h3><p>Connecting spectral features with molecular properties and combining complementary spectroscopic evidence to investigate structure.</p><a href="#resources">Explore learning resources</a></article>
+      </div>
+      <p class="note">This is an initial module map based on the supplied lecture materials. Detailed chapter pages and subtopic coverage will be added after the source materials are audited and edited.</p>
     </section>
-
-    <section>
-        <h2>Learning Objectives</h2>
-
-        <p>Students completing this course should be able to:</p>
-
-        <ol>
-            <li>Explain the fundamental principles of spectroscopy and radiation–matter interactions.</li>
-            <li>Understand the quantization of molecular rotational, vibrational, electronic, and magnetic energy levels.</li>
-            <li>Explain the theoretical basis of major molecular spectroscopic techniques.</li>
-            <li>Describe and apply spectroscopic selection rules and transition probabilities.</li>
-            <li>Understand the influence of molecular structure, symmetry, and bonding on spectroscopic behaviour.</li>
-            <li>Apply fundamental equations and mathematical models to explain spectroscopic phenomena.</li>
-            <li>Interpret basic spectral features and relate them to molecular properties.</li>
-            <li>Compare different spectroscopic techniques in terms of their underlying physical principles and chemical information.</li>
-        </ol>
+    <section id="study-path"><div class="section-head"><div class="kicker">Suggested approach</div><h2>A study path that builds understanding</h2><p>Move from the physical basis of spectroscopy to individual techniques, then practise interpreting the information contained in spectra.</p></div>
+      <div class="pathway"><div class="steps">
+        <div class="step"><b>01 · Build the foundation</b><span>Review electromagnetic radiation, quantised energy and molecular energy levels.</span></div>
+        <div class="step"><b>02 · Understand transitions</b><span>Study rotational and vibrational behaviour before moving to electronic transitions.</span></div>
+        <div class="step"><b>03 · Compare techniques</b><span>Connect IR and Raman activity with molecular properties and selection rules.</span></div>
+        <div class="step"><b>04 · Interpret evidence</b><span>Use spectral patterns, calculations and worked problems to reason about molecules.</span></div>
+      </div></div>
     </section>
-
-    <section>
-        <h2>Course Content</h2>
-
-        <ol>
-            <li>General Introduction to Spectroscopy</li>
-            <li>Microwave Spectroscopy</li>
-            <li>Vibrational Spectroscopy</li>
-            <li>Electronic Spectroscopy (UV-Visible)</li>
-            <li>Raman Spectroscopy</li>
-            <li>Magnetic Resonance Spectroscopy</li>
-            <li>Nuclear Magnetic Resonance (NMR) Spectroscopy</li>
-            <li>Electron Spin Resonance (ESR/EPR) Spectroscopy</li>
-            <li>Mössbauer Spectroscopy</li>
-            <li>Photoelectron Spectroscopy</li>
-        </ol>
+    <section id="resources"><div class="section-head"><div class="kicker">Study and practise</div><h2>Learning resources</h2><p>The resource area will bring explanations and practice materials together, rather than simply presenting lecture files as downloads.</p></div>
+      <div class="resource-grid"><article class="resource"><div class="symbol" aria-hidden="true">∑</div><h3>Worked examples</h3><p>Step-by-step calculations, unit handling, equation use and interpretation of numerical results.</p></article>
+      <article class="resource"><div class="symbol" aria-hidden="true">⌁</div><h3>Diagrams and illustrations</h3><p>Original visual explanations of energy levels, molecular motion, transitions and instrument components.</p></article>
+      <article class="resource"><div class="symbol" aria-hidden="true">✓</div><h3>Practice questions</h3><p>Concept checks, structured problems and revision questions with solutions or marking guidance.</p></article></div>
     </section>
-
-    <section>
-        <h2>Lecture Notes</h2>
-        <p>Lecture notes will be organised according to the course topics.</p>
-    </section>
-
-    <section>
-        <h2>Lecture Slides</h2>
-        <p>Presentation slides will be provided here.</p>
-    </section>
-
-    <section>
-        <h2>Worked Examples and Exercises</h2>
-        <p>Practice questions, worked examples and assignments will be provided here.</p>
-    </section>
-
-    <section>
-        <h2>Recommended References</h2>
-        <p>Recommended textbooks and additional learning materials will be listed here.</p>
-    </section>
-
-</main>
-
-<footer>
-    © 2026 Oluwakemi Oloba-Whenu | Academic Website
-</footer>
-
+    <section id="foundations"><div class="foundation"><div><div class="eyebrow">Companion learning resource</div><h2>Need to revisit the quantum foundations?</h2>
+      <p>Quantum-mechanical principles, model systems, atomic structure and molecular symmetry will be developed as a separate companion resource. Relevant concepts will be linked from spectroscopy chapters where they are needed.</p></div><a class="button" href="#chapters">Return to topics</a></div></section>
+  </main>
+  <footer><p><strong>Molecular Spectroscopy</strong> · A teaching and learning resource</p><p>Explanations, examples and learning materials are being developed from the course resources.</p></footer>
 </body>
 </html>
