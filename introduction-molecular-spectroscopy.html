@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Introduction to molecular spectroscopy: electromagnetic radiation, molecular energy levels, light-matter interactions, spectra and selection rules.">
+<title>Introduction to Molecular Spectroscopy | Learning Module 01</title>
+<style>
+:root{--navy:#172b4d;--teal:#087f8c;--teal-dark:#05616b;--pale:#e8f5f5;--paper:#f6f8fb;--line:#dce4ec;--muted:#64748b;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:85px}
+body{margin:0;background:var(--paper);color:var(--navy);font:16px/1.75 system-ui,-apple-system,"Segoe UI",Arial,sans-serif}
+a{color:var(--teal-dark)}.top{position:sticky;top:0;z-index:5;background:#fff;border-bottom:1px solid var(--line)}
+.nav{max-width:1100px;margin:auto;padding:13px 24px;display:flex;justify-content:space-between;gap:20px;align-items:center}.nav a{text-decoration:none;font-weight:700}.nav .back{font-size:.9rem}
+.hero{background:linear-gradient(120deg,#142746,#087f8c);color:white;padding:62px 24px}.hero-inner{max-width:1100px;margin:auto}
+.eyebrow{text-transform:uppercase;letter-spacing:.15em;font-size:.76rem;font-weight:800;color:#a8e6e3}
+h1{font-size:clamp(2.2rem,5vw,3.8rem);line-height:1.08;letter-spacing:-.04em;margin:12px 0}
+.hero p{max-width:760px;color:#e1edf3;font-size:1.08rem;margin:0}
+.layout{max-width:1100px;margin:32px auto 80px;padding:0 24px;display:grid;grid-template-columns:245px minmax(0,1fr);gap:28px}
+.toc{align-self:start;position:sticky;top:90px;background:white;border:1px solid var(--line);border-radius:14px;padding:20px}
+.toc strong{display:block;margin-bottom:10px}.toc a{display:block;text-decoration:none;color:#40536d;font-size:.9rem;padding:5px 0}.toc a:hover{color:var(--teal)}
+article{min-width:0}.block{background:white;border:1px solid var(--line);border-radius:16px;padding:28px;margin-bottom:20px;box-shadow:0 8px 24px rgba(23,43,77,.04)}
+h2{font-size:1.7rem;line-height:1.2;margin:0 0 15px;letter-spacing:-.025em}h3{font-size:1.16rem;margin:22px 0 8px}
+p{margin:9px 0 14px;color:#344766}ul,ol{padding-left:24px;color:#344766}li{margin:6px 0}
+.objectives{background:#eef7f7;border-left:4px solid var(--teal);padding:18px 22px;border-radius:8px}
+.equation{background:#f3f6fa;border:1px solid var(--line);border-radius:10px;padding:17px;text-align:center;font:1.15rem Georgia,serif;margin:16px 0;color:#172b4d;overflow-x:auto}
+.definition{border-left:3px solid #e5b45b;padding:10px 16px;background:#fffaf0;margin:16px 0;color:#344766}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:.94rem}th,td{padding:11px 12px;border:1px solid var(--line);text-align:left;vertical-align:top}th{background:#edf4f7}
+.callout{background:var(--pale);border-radius:12px;padding:17px 20px;margin:16px 0}.callout strong{color:var(--teal-dark)}
+.example{background:#f8fafc;border:1px dashed #aebdca;border-radius:12px;padding:18px;margin:16px 0}
+.small{font-size:.9rem;color:var(--muted)}.endnav{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;margin-top:24px}
+footer{text-align:center;background:#10223d;color:#d7e2ed;padding:24px;font-size:.9rem}
+@media(max-width:800px){.layout{grid-template-columns:1fr}.toc{position:static}.toc a{display:inline-block;margin-right:12px}.block{padding:21px}.nav{align-items:flex-start;flex-direction:column;gap:4px}}
+</style>
+</head>
+<body>
+<div class="top"><div class="nav"><a href="molecular-spectroscopy.html">← Molecular Spectroscopy</a><a class="back" href="#top">Module 01 · Introduction</a></div></div>
+<header class="hero" id="top"><div class="hero-inner"><div class="eyebrow">Learning module 01</div><h1>Introduction to Molecular Spectroscopy</h1><p>Understanding how electromagnetic radiation interacts with molecules, how transitions between molecular energy levels produce spectra, and how spectroscopic observations reveal molecular properties.</p></div></header>
+<div class="layout">
+<aside class="toc"><strong>In this module</strong>
+<a href="#outcomes">Learning outcomes</a><a href="#meaning">1. Meaning and scope</a><a href="#radiation">2. Electromagnetic radiation</a><a href="#spectrum">3. Electromagnetic spectrum</a><a href="#levels">4. Molecular energy levels</a><a href="#interaction">5. Radiation–matter interactions</a><a href="#spectrum-record">6. What is a spectrum?</a><a href="#rules">7. Selection rules</a><a href="#applications">8. Applications</a><a href="#summary">Summary</a><a href="#questions">Review questions</a>
+</aside>
+<article>
+<section class="block" id="outcomes"><h2>Learning outcomes</h2><div class="objectives"><p>By the end of this module, you should be able to:</p><ul>
+<li>define spectroscopy and molecular spectroscopy;</li><li>describe the principal properties of electromagnetic radiation;</li><li>relate wavelength, frequency, wavenumber and photon energy;</li><li>explain why molecular energy levels are quantised;</li><li>describe absorption, emission and scattering processes;</li><li>explain the origin and basic features of a molecular spectrum;</li><li>distinguish gross selection rules from specific selection rules; and</li><li>identify important chemical applications of spectroscopy.</li></ul></div></section>
+<section class="block" id="meaning"><h2>1. Meaning and scope of spectroscopy</h2>
+<p><strong>Spectroscopy</strong> is the study of the interaction of electromagnetic radiation with matter. During this interaction, matter may absorb, emit or scatter radiation. The measured response can be represented as a spectrum and interpreted to obtain information about the system being studied.</p>
+<p><strong>Molecular spectroscopy</strong> uses these interactions to probe the energy states and properties of molecules. It provides a way to investigate molecular structure and bonding by examining the frequencies and intensities associated with transitions between molecular states.</p>
+<div class="definition"><strong>Key distinction:</strong> spectroscopy is the general study of radiation–matter interactions; molecular spectroscopy focuses on the information obtained from molecules and their quantised states.</div>
+<p>The course materials introduce spectroscopy as a tool for determining molecular structure and bonding, identifying unknown compounds, quantifying the amount of a substance, and evaluating properties such as dipole moment and polarizability. These uses arise because different molecular properties influence how radiation is absorbed, emitted or scattered.</p>
+<h3>What information can a spectrum provide?</h3><ul><li>Evidence about molecular structure and bonding.</li><li>Information about rotational, vibrational and electronic energy differences.</li><li>Evidence of molecular symmetry and the activity of particular transitions.</li><li>Qualitative identification and quantitative measurement of chemical substances.</li><li>Information about magnetic environments and spin states in magnetic resonance methods.</li></ul>
+</section>
+<section class="block" id="radiation"><h2>2. Electromagnetic radiation</h2>
+<p>Electromagnetic radiation is energy that propagates through space as coupled electric and magnetic fields. The fields oscillate in phase, are perpendicular to each other, and are perpendicular to the direction of propagation. Unlike mechanical waves, electromagnetic radiation does not require a material medium to travel through a vacuum.</p>
+<h3>2.1 Wave properties</h3>
+<p>The main quantities used to describe electromagnetic radiation in spectroscopy are wavelength, frequency, period, amplitude, intensity and wavenumber.</p>
+<table><thead><tr><th>Quantity</th><th>Symbol</th><th>Meaning</th><th>Common unit</th></tr></thead><tbody>
+<tr><td>Wavelength</td><td>λ</td><td>Distance between equivalent points on successive cycles, such as crest to crest.</td><td>m, nm, μm</td></tr>
+<tr><td>Frequency</td><td>ν</td><td>Number of complete oscillations passing a point per second.</td><td>Hz or s⁻¹</td></tr>
+<tr><td>Period</td><td>T</td><td>Time taken for one complete cycle.</td><td>s</td></tr>
+<tr><td>Angular frequency</td><td>ω</td><td>Frequency expressed in radians per second.</td><td>rad s⁻¹</td></tr>
+<tr><td>Wavenumber</td><td>ν̃</td><td>Number of wave cycles per unit distance; commonly the reciprocal of wavelength.</td><td>cm⁻¹</td></tr>
+<tr><td>Intensity</td><td>I</td><td>Measure of radiant power distributed over an area (measurement convention matters).</td><td>W m⁻²</td></tr>
+</tbody></table>
+<p>For a wave travelling in a vacuum, wavelength and frequency are related by the speed of light:</p>
+<div class="equation">c = λν &nbsp;&nbsp; and &nbsp;&nbsp; ω = 2πν</div>
+<p>where <em>c</em> is the speed of light in vacuum (approximately 2.998 × 10⁸ m s⁻¹). Wavelength and frequency are inversely related: at a fixed wave speed, a shorter wavelength corresponds to a higher frequency.</p>
+<h3>2.2 Particle description: photons</h3>
+<p>Electromagnetic radiation also has a particle description. It can be treated as packets of energy called <strong>photons</strong>. The energy of one photon is proportional to its frequency:</p>
+<div class="equation">E = hν = hc / λ</div>
+<p>Here, <em>h</em> is Planck’s constant. Consequently, high-frequency, short-wavelength radiation has higher photon energy than low-frequency, long-wavelength radiation.</p>
+<h3>2.3 Wavenumber</h3>
+<p>Wavenumber is especially useful in infrared and Raman spectroscopy. It is the reciprocal of wavelength when wavelength is expressed in centimetres:</p>
+<div class="equation">ν̃ = 1 / λ &nbsp;&nbsp; (λ in cm)</div>
+<p>Its common unit is cm⁻¹. Wavenumber is proportional to frequency and photon energy, so a larger wavenumber corresponds to a higher-energy photon.</p>
+<div class="example"><strong>Worked example 1: Photon energy</strong><p>Calculate the energy of a photon with wavelength 500 nm.</p><p>Convert wavelength: λ = 500 × 10⁻⁹ m = 5.00 × 10⁻⁷ m.</p><p>Using E = hc/λ, with h = 6.626 × 10⁻³⁴ J s and c = 2.998 × 10⁸ m s⁻¹:</p><div class="equation">E = (6.626 × 10⁻³⁴ × 2.998 × 10⁸) / (5.00 × 10⁻⁷)</div><p><strong>E = 3.97 × 10⁻¹⁹ J per photon</strong>.</p></div>
+</section>
+<section class="block" id="spectrum"><h2>3. The electromagnetic spectrum</h2>
+<p>The electromagnetic spectrum covers a continuous range of wavelengths and frequencies. Spectroscopic techniques select particular regions because the photon energies in those regions can couple to different molecular energy changes.</p>
+<table><thead><tr><th>Region</th><th>Typical molecular information / technique</th></tr></thead><tbody>
+<tr><td>Microwave</td><td>Rotational transitions of molecules with an appropriate permanent dipole moment.</td></tr>
+<tr><td>Infrared</td><td>Vibrational transitions involving a change in dipole moment.</td></tr>
+<tr><td>Visible and ultraviolet</td><td>Electronic transitions between molecular electronic states.</td></tr>
+<tr><td>Radiofrequency</td><td>Nuclear spin transitions in nuclear magnetic resonance (NMR), in the presence of a magnetic field.</td></tr>
+<tr><td>Microwave / radiofrequency magnetic resonance</td><td>Electron spin transitions in electron spin resonance (ESR/EPR), depending on the magnetic field and experimental conditions.</td></tr>
+<tr><td>Visible / near-infrared laser excitation</td><td>Raman spectroscopy measures inelastically scattered light; the Raman shift reports molecular energy changes.</td></tr>
+</tbody></table>
+<p class="small">The table is a conceptual guide, not a set of strict non-overlapping boundaries. The exact frequency ranges and experimental arrangements depend on the technique.</p>
+</section>
+<section class="block" id="levels"><h2>4. Molecular energy levels</h2>
+<p>Molecules possess quantised energy states. Their energy is associated with several types of molecular motion and internal degrees of freedom. The principal contributions introduced in the course materials are electronic, vibrational and rotational energy, together with nuclear and electron spin contributions for magnetic resonance spectroscopy.</p>
+<div class="equation">E<sub>total</sub> ≈ E<sub>electronic</sub> + E<sub>vibrational</sub> + E<sub>rotational</sub> + E<sub>spin</sub></div>
+<p>This expression is a useful way to organise the contributions to molecular energy. It should not be taken to mean that all contributions are completely independent under every circumstance. The Born–Oppenheimer approximation provides a framework for separating electronic and nuclear motion approximately; interactions and coupling between motions can still influence spectra.</p>
+<h3>4.1 Electronic energy</h3><p>Electronic energy is associated with the distribution and motion of electrons in a molecule. Electronic transitions are commonly probed by ultraviolet and visible radiation.</p>
+<h3>4.2 Vibrational energy</h3><p>Vibrational energy is associated with periodic motion of atoms about their equilibrium positions. Infrared and Raman spectroscopy commonly probe changes between vibrational states.</p>
+<h3>4.3 Rotational energy</h3><p>Rotational energy is associated with the rotation of a molecule as a whole. Rotational transitions of suitable molecules are commonly investigated using microwave spectroscopy.</p>
+<h3>4.4 Spin energy</h3><p>Electrons and certain nuclei possess spin and associated magnetic moments. In an external magnetic field, spin energy levels can split, and transitions between them form the basis of ESR/EPR and NMR spectroscopy.</p>
+<div class="callout"><strong>Energy-scale idea:</strong> rotational energy spacings are generally smaller than vibrational spacings, which are generally smaller than electronic spacings. This is why different regions of electromagnetic radiation are used to probe different kinds of molecular transitions.</div>
+</section>
+<section class="block" id="interaction"><h2>5. How radiation interacts with molecules</h2>
+<p>When radiation interacts with a molecule, energy may be transferred to or from the molecule, or the radiation may be redirected. Three central processes in optical spectroscopy are absorption, spontaneous emission and stimulated emission. Scattering is also important, especially in Raman spectroscopy.</p>
+<h3>5.1 Absorption</h3><p>During absorption, a molecule in a lower energy state takes up a photon and moves to a higher energy state. The photon energy must match the energy difference between the two states:</p>
+<div class="equation">ΔE = E<sub>f</sub> − E<sub>i</sub> = hν</div>
+<p>If the radiation does not have the required energy, that particular transition will not be induced by one-photon absorption.</p>
+<h3>5.2 Emission</h3><p>Emission occurs when an excited molecule moves to a lower energy state and releases energy as a photon. In <strong>spontaneous emission</strong>, the transition occurs without an incoming photon triggering it. In <strong>stimulated emission</strong>, an incoming photon induces the excited system to emit another photon with matching energy, phase and direction.</p>
+<h3>5.3 Scattering</h3><p>Scattering is the redirection of radiation following its interaction with matter. In elastic scattering, the scattered radiation has the same frequency as the incident radiation. In inelastic scattering, its frequency changes because energy is exchanged with the molecule. Raman scattering is an important example of inelastic scattering.</p>
+<table><thead><tr><th>Process</th><th>What happens to the molecule?</th><th>What happens to radiation?</th></tr></thead><tbody>
+<tr><td>Absorption</td><td>Moves to a higher energy state.</td><td>Photon is absorbed.</td></tr>
+<tr><td>Emission</td><td>Moves to a lower energy state.</td><td>Photon is released.</td></tr>
+<tr><td>Elastic scattering</td><td>No net change in molecular energy.</td><td>Direction changes; frequency remains the same.</td></tr>
+<tr><td>Inelastic scattering</td><td>Molecular energy changes.</td><td>Scattered frequency differs from incident frequency.</td></tr>
+</tbody></table>
+</section>
+<section class="block" id="spectrum-record"><h2>6. What is a spectrum?</h2>
+<p>A spectrum is a representation of the measured response of matter as a function of a radiation variable, commonly wavelength, frequency or wavenumber. Depending on the experiment, the response may be recorded as absorbance, transmittance, emitted intensity or scattered intensity.</p>
+<p>Spectral features have positions and intensities. The position of a line or band is related to an energy difference between states. Its intensity depends on factors such as the probability of the transition and the number of molecules occupying the initial state. In absorption measurements, concentration and path length also affect the observed signal.</p>
+<h3>6.1 Absorbance and transmittance</h3><p>Transmittance is the ratio of transmitted radiant intensity to incident radiant intensity:</p>
+<div class="equation">T = I / I<sub>0</sub> &nbsp;&nbsp;&nbsp; %T = 100T</div>
+<p>Absorbance is defined as:</p><div class="equation">A = −log<sub>10</sub>(T) = log<sub>10</sub>(I<sub>0</sub>/I)</div>
+<p>For an absorbing solution under the conditions where the Beer–Lambert relationship applies:</p><div class="equation">A = εlc</div>
+<p>where ε is the molar absorptivity, l is the optical path length and c is the concentration. This relationship provides the basis for quantitative absorption measurements.</p>
+<div class="example"><strong>Worked example 2: Absorbance from transmittance</strong><p>A sample has a transmittance of 0.20. Calculate its absorbance.</p><div class="equation">A = −log<sub>10</sub>(0.20) = 0.699</div><p><strong>Absorbance = 0.699</strong> (dimensionless).</p></div>
+<h3>6.2 Spectral line broadening</h3><p>Idealised models may represent transitions as sharp lines. Real spectra often show lines or bands with finite width. The width can be influenced by the lifetime of excited states, molecular motion (Doppler broadening), collisions and the local environment. A common measure of linewidth is the full width at half maximum (FWHM).</p>
+</section>
+<section class="block" id="rules"><h2>7. Selection rules</h2>
+<p>A <strong>selection rule</strong> is a quantum-mechanical condition that determines whether a transition between specified states is allowed or forbidden within a particular approximation. Selection rules arise from the way the radiation field couples to molecular properties, such as electric dipole moment, magnetic dipole moment or polarizability.</p>
+<p>For an electric-dipole transition, the transition dipole moment is expressed as an integral involving the initial and final wavefunctions and the dipole moment operator. If the relevant transition moment is zero, the transition is electric-dipole forbidden in that approximation; if it is non-zero, the transition is allowed. An allowed transition is not automatically intense: intensity also depends on the magnitude of the transition moment and other experimental and population factors.</p>
+<h3>7.1 Gross and specific selection rules</h3><p>The course text distinguishes two levels of selection rule:</p>
+<ul><li><strong>Gross (general) selection rule:</strong> specifies the molecular property required for a type of spectroscopic activity.</li><li><strong>Specific selection rule:</strong> specifies the permitted changes in quantum numbers for a transition.</li></ul>
+<table><thead><tr><th>Technique</th><th>General requirement highlighted in the course material</th></tr></thead><tbody>
+<tr><td>Microwave rotational spectroscopy</td><td>Molecule has a permanent dipole moment.</td></tr>
+<tr><td>Infrared vibrational spectroscopy</td><td>The vibration produces a change in dipole moment.</td></tr>
+<tr><td>Raman spectroscopy</td><td>The vibration or rotation produces a change in polarizability.</td></tr>
+<tr><td>NMR spectroscopy</td><td>Nuclei with suitable non-zero nuclear spin (magnetically active nuclei).</td></tr>
+<tr><td>ESR/EPR spectroscopy</td><td>Unpaired electrons.</td></tr>
+</tbody></table>
+<p>“Forbidden” does not always mean that a transition can never be observed. Some transitions that are forbidden in a simple approximation may occur weakly through higher-order interactions, coupling or relaxation of the assumptions used in deriving the rule.</p>
+</section>
+<section class="block" id="applications"><h2>8. Applications of molecular spectroscopy</h2>
+<ul><li><strong>Structural identification:</strong> using characteristic spectral features to help identify functional groups, bonding environments and molecular structure.</li><li><strong>Quantitative analysis:</strong> measuring concentration from an absorption signal, for example using the Beer–Lambert law.</li><li><strong>Investigating molecular properties:</strong> estimating or examining properties such as dipole moment and polarizability.</li><li><strong>Studying molecular motion:</strong> probing rotational and vibrational energy changes.</li><li><strong>Electronic structure:</strong> examining electronic transitions and the energy levels associated with them.</li><li><strong>Magnetic environments:</strong> using NMR and EPR/ESR to investigate nuclear and electron spin environments.</li></ul>
+</section>
+<section class="block" id="summary"><h2>Module summary</h2>
+<ul><li>Spectroscopy studies the interaction of radiation with matter; molecular spectroscopy uses these interactions to probe molecular states and properties.</li><li>Electromagnetic radiation is described by wavelength, frequency and wavenumber, with photon energy given by E = hν.</li><li>Molecular energy includes electronic, vibrational, rotational and spin contributions.</li><li>Absorption, emission and scattering are central radiation–matter processes.</li><li>A spectrum records a response against wavelength, frequency or wavenumber; spectral positions and intensities carry different kinds of information.</li><li>Selection rules determine which transitions are allowed within a stated approximation.</li><li>Different spectroscopic techniques provide complementary information about molecules.</li></ul>
+</section>
+<section class="block" id="questions"><h2>Review questions</h2>
+<ol><li>Define spectroscopy and distinguish it from molecular spectroscopy.</li><li>Explain why electromagnetic radiation is described using both wave and particle models.</li><li>Derive the relationship between photon energy and wavelength.</li><li>Calculate the energy of a photon of wavelength 400 nm.</li><li>What is wavenumber, and why is it commonly used in infrared spectroscopy?</li><li>Identify the principal molecular motions associated with rotational, vibrational and electronic spectroscopy.</li><li>Distinguish absorption, spontaneous emission, stimulated emission and scattering.</li><li>Explain the meaning of ΔE = hν in molecular spectroscopy.</li><li>Define a selection rule. Distinguish gross and specific selection rules.</li><li>State the general spectroscopic activity requirements for microwave, IR, Raman, NMR and EPR/ESR methods.</li><li>What information can be obtained from the position and intensity of a spectral band?</li><li>A solution transmits 25% of incident light. Calculate its absorbance.</li></ol>
+<h3>Suggested extension</h3><p>Compare the information obtained from IR and Raman spectroscopy for a molecule with a centre of inversion. Explain the relevance of the mutual exclusion principle; this will be developed in the Raman and molecular symmetry modules.</p>
+<div class="endnav"><a href="molecular-spectroscopy.html">← Back to Molecular Spectroscopy</a><a href="#top">Back to top ↑</a></div>
+</section>
+</article>
+</div>
+<footer><strong>Molecular Spectroscopy · Module 01</strong><br>Teaching and learning resource</footer>
+</body></html>
